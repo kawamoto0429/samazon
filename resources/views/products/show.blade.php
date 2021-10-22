@@ -52,7 +52,7 @@
                             <i class="fa fa-heart"></i>
                             お気に入り
                         </a>
-+                        @endif
+                        @endif
                     </div>
                 </div>
             </form>
