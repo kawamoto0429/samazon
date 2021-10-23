@@ -200,3 +200,11 @@ label {
   cursor: pointer;
   cursor: hand;
 }
+
+.review-score-color {
+  color: #0fbe9f;
+}
+
+.review-score-color:focus {
+  color: #0fbe9f;
+}
