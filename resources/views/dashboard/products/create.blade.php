@@ -6,7 +6,7 @@
 
     <hr>
 
-    <form method="POST" action="/dashboard/products" class="mb-5">
+    <form method="POST" action="/dashboard/products" class="mb-5" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-inline mt-4 mb-4 row">
             <label for="product-name" class="col-2 d-flex justify-content-start">商品名</label>
@@ -45,4 +45,15 @@
         <a href="/dashboard/products">商品一覧に戻る</a>
     </div>
 </div>
+<script type="text/javascript">
+     $("#product-image").change(function() {
+         if (this.files && this.files[0]) {
+             let reader = new FileReader();
+             reader.onload = function(e) {
+                 $("#product-image-preview").attr("src", e.target.result);
+             }
+             reader.readAsDataURL(this.files[0]);
+         }
+     });
+ </script>
 @endsection 
