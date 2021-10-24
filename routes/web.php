@@ -47,4 +47,5 @@ Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
      Route::resource('categories', 'Dashboard\CategoryController')->middleware('auth:admins');
      Route::resource('products', 'Dashboard\ProductController')->middleware('auth:admins');
      Route::resource('users', 'Dashboard\UserController')->middleware('auth:admins');
+     Route::get('orders', 'Dashboard\OrderController@index')->middleware('auth:admins');
  });
